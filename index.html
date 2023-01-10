@@ -11,10 +11,15 @@
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+    @font-face {
+      font-family: Inter;
+      src: url('./assets/fonts/Inter-VariableFont_slnt\,wght.ttf');
+    }
     html {
       margin:0;
       padding:0;
       box-sizing: border-box;
+      font-family: Inter;
     }
     body {
       padding:5em 10em;
@@ -22,6 +27,7 @@
     header {
       display: flex;
       justify-content: space-between;
+      /*padding-left: 20px;*/
     }
 
     nav {
@@ -37,11 +43,66 @@
 
     .left-part {
       max-width: 1100px;
+      padding:0 20px 0 0;
+    }
+
+    .right-part {
+      background:rgb(8, 6, 6);
+      padding:0 0 0 20px;
+      color:white;
     }
 
     img {
       max-width: 100%;
       max-height: 100%;
+    }
+    h1 {
+      font-size: 56px;
+      width: 50%;
+      margin: 10px 0 0 0;
+      padding-right: 20px;
+    }
+    .bottom-left {
+      display: flex;
+    }
+    h2 {
+      color: yellow;
+    }
+    .dive-into-evolution {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+    }
+
+    .readmore {
+      text-decoration: none;
+      color: white;
+      background-color: orange;
+      letter-spacing: 2px;
+      padding: 10px 0;
+      width: 50%;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .bottom-part {
+      width: 100%;
+      display: flex;
+      margin-top: 4em;
+      justify-content: space-between;
+    }
+
+    .wrapper-article {
+      display: flex;
+    }
+
+    .wrapper-article img {
+      width: 100px;
+      height: auto;
+    }
+
+    .infos-article {
+      padding:10px;
     }
   
   </style>
@@ -66,13 +127,15 @@
           <source srcset="./assets/images/image-web-3-desktop.jpg" media="(min-width: 600px)" />
           <img src="./assets/images/image-web-3-mobile.jpg" alt="MDN" />
         </picture>
-        <h1>The Bright Future of Web 3.0?</h1>
-        <div>
-          <p>
-            We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
-            But is it really fulfilling its promise?
-          </p>
-          <a>Read more</a>
+        <div class="bottom-left">
+          <h1>The Bright Future of Web 3.0?</h1>
+          <div class="dive-into-evolution">
+              <p>
+                We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+                But is it really fulfilling its promise?
+              </p>
+              <a class="readmore">Read more</a>
+          </div>
         </div>
       </section>
       <section class="right-part">
@@ -104,26 +167,35 @@
       </section>
     </section>
     <section class="bottom-part">
-      <div>
-        <span>01</span>
-        <p>
-          Reviving Retro PCs
-          What happens when old PCs are given modern upgrades?
-        </p>
+      <div class="wrapper-article">
+        <img src="./assets/images/image-retro-pcs.jpg" alt="retro computers">
+        <div class="infos-article">
+          <span>01</span>
+          <p>
+            Reviving Retro PCs
+            What happens when old PCs are given modern upgrades?
+          </p>
+        </div>
       </div>
-      <div>
-        <span>02</span>
-        <p>
-          Top 10 Laptops of 2022
-          Our best picks for various needs and budgets.
-        </p>
+      <div class="wrapper-article">
+        <img src="./assets/images/image-top-laptops.jpg" alt="keyboard">
+        <div class="infos-article">
+          <span>02</span>
+          <p>
+            Top 10 Laptops of 2022
+            Our best picks for various needs and budgets.
+          </p>
+        </div>
       </div>
-      <div>
-        <span>03</span>
-        <p>
-          The Growth of Gaming
-          How the pandemic has sparked fresh opportunities.
-        </p>
+      <div class="wrapper-article">
+        <img src="./assets/images/image-gaming-growth.jpg" alt="">
+        <div class="infos-article">
+          <span>03</span>
+          <p>
+            The Growth of Gaming
+            How the pandemic has sparked fresh opportunities.
+          </p>
+        </div>
       </div>
     </section>
   </section>
