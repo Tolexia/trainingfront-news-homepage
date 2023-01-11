@@ -24,6 +24,11 @@
     body {
       padding:5em 10em;
     }
+
+    p {
+      font-size: 15px;
+    }
+
     header {
       display: flex;
       justify-content: space-between;
@@ -43,13 +48,17 @@
 
     .left-part {
       max-width: 1100px;
-      padding:0 20px 0 0;
+      padding:0 30px 0 0;
     }
 
     .right-part {
       background:rgb(8, 6, 6);
-      padding:0 0 0 20px;
+      padding: 20px;
       color:white;
+    }
+
+    .news-item:not(:last-child){
+      border-bottom: 1px solid white;
     }
 
     img {
@@ -61,23 +70,30 @@
       width: 50%;
       margin: 10px 0 0 0;
       padding-right: 20px;
+      padding-top: 10px;
     }
     .bottom-left {
       display: flex;
     }
     h2 {
-      color: yellow;
+      color: hsl(35, 77%, 62%);
     }
     .dive-into-evolution {
       display: flex;
       flex-direction: column;
       width: 50%;
+      justify-content: space-between;
+    }
+
+    .dive-into-evolution p {
+      padding-right: 2em;
+      padding-top: 1em;
     }
 
     .readmore {
       text-decoration: none;
       color: white;
-      background-color: orange;
+      background-color: hsl(5, 85%, 63%);
       letter-spacing: 2px;
       padding: 10px 0;
       width: 50%;
@@ -102,7 +118,16 @@
     }
 
     .infos-article {
-      padding:10px;
+      padding: 10px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+
+    .infos-article span {
+      display: block;
+      color: lightgrey;
+      font-size: 25px;
     }
   
   </style>
@@ -140,7 +165,7 @@
       </section>
       <section class="right-part">
         <h2>New</h2>
-        <div>
+        <div class="news-item">
           <h5>
             Hydrogen VS Electric Cars
           </h5>
@@ -148,7 +173,7 @@
             Will hydrogen-fueled cars ever catch up to EVs?
           </p>
         </div>
-        <div>
+        <div class="news-item">
           <h5>
             The Downsides of AI Artistry
           </h5>
@@ -156,7 +181,7 @@
             What are the possible adverse effects of on-demand AI image generation?
           </p>
         </div>
-        <div>
+        <div class="news-item">
           <h5>
             Is VC Funding Drying Up?
           </h5>
@@ -171,8 +196,8 @@
         <img src="./assets/images/image-retro-pcs.jpg" alt="retro computers">
         <div class="infos-article">
           <span>01</span>
+          <b>Reviving Retro PCs</b>
           <p>
-            Reviving Retro PCs
             What happens when old PCs are given modern upgrades?
           </p>
         </div>
@@ -181,8 +206,8 @@
         <img src="./assets/images/image-top-laptops.jpg" alt="keyboard">
         <div class="infos-article">
           <span>02</span>
+          <b>Top 10 Laptops of 2022</b>
           <p>
-            Top 10 Laptops of 2022
             Our best picks for various needs and budgets.
           </p>
         </div>
@@ -191,8 +216,8 @@
         <img src="./assets/images/image-gaming-growth.jpg" alt="">
         <div class="infos-article">
           <span>03</span>
+          <b>The Growth of Gaming</b>
           <p>
-            The Growth of Gaming
             How the pandemic has sparked fresh opportunities.
           </p>
         </div>
