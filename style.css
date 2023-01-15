@@ -1,0 +1,331 @@
+.attribution { font-size: 11px; text-align: center;margin-top: 2em;}
+.attribution a { color: hsl(228, 45%, 44%); }
+@font-face {
+  font-family: Inter;
+  src: url('./assets/fonts/Inter-VariableFont_slnt\,wght.ttf');
+}
+@font-face {
+  font-family: Inter-bold;
+  src: url('./assets/fonts/static/Inter-Bold.ttf');
+}
+html, body {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: Inter;
+}
+
+.body {
+  padding:0 1em;
+  max-width: 1175px;
+  margin: auto;
+}
+
+.shader {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.7;
+  z-index: 1;
+}
+p {
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.logo {
+    width: 65px;
+    height: 40px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2em;
+  margin-top: 2em;
+}
+
+nav {
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav a {
+  font-size: 15px;
+}
+nav a:not(:last-child)
+{
+  margin-right: 3em;
+}
+
+.falselink {
+  text-decoration: none;
+  cursor: pointer;
+}
+.top-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.left-part {
+  width: 66%;
+  padding:0 30px 0 0;
+  margin: auto;
+}
+
+.right-part {
+  background:rgb(8, 6, 6);
+  padding: 20px 30px;
+  color:white;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.news-item:not(:last-child){
+  border-bottom: 1px solid white;
+  padding-bottom: 1em;
+}
+
+.right-part h5 {
+  margin-block-end: 0.5em;
+  font-size: 20px;
+}
+
+.right-part p {
+  line-height: 1.2em;
+  margin-block-start: 0;
+  opacity: 0.6;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+h1 {
+  font-size: 56px;
+  font-family: Inter-bold;
+  width: 50%;
+  margin: 10px 0 0 0;
+  padding-right: 20px;
+  padding-top: 10px;
+}
+.bottom-left {
+  display: flex;
+}
+h2 {
+  color: hsl(35, 77%, 62%);
+  font-size: 35px;
+  margin-block-end: 0;
+  margin-block-start: 0.2em;
+}
+.dive-into-evolution {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: space-between;
+  margin-left: 1em;
+}
+
+.dive-into-evolution p {
+  padding-right: 2em;
+  padding-top: 1em;
+  line-height: 1.7em;
+}
+
+.readmore {
+  text-decoration: none;
+  color: white;
+  background-color: hsl(5, 85%, 63%);
+  letter-spacing: 4px;
+  padding: 15px 0;
+  width: 50%;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.bottom-part {
+  width: 100%;
+  display: flex;
+  margin-top: 4em;
+  justify-content: space-between;
+}
+
+.wrapper-article {
+  display: flex;
+}
+
+.wrapper-article img {
+  width: auto;
+  height: 7em;
+}
+
+.infos-article {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  max-width: 225px;
+}
+
+.infos-article:last-child{
+  padding: 0 0 0 20px;
+}
+
+.infos-article span {
+  display: block;
+  color: grey;
+  font-size: 27px;
+  font-weight: bold;
+}
+
+.infos-article b {
+  margin-top: 0.2em;
+}
+
+.infos-article p {
+  line-height: 1.5;
+  margin-block-start: 0.5em;
+  color: grey;
+}
+
+/* Hover Effects */
+
+nav a:hover, .infos-article b:hover {
+  color: hsl(5, 85%, 63%);
+}
+
+.readmore:hover {
+  background-color: black;
+}
+
+.news-item h5:hover {
+  color: hsl(35, 77%, 62%);
+}
+
+
+/* Responsive */
+
+.menu-button, .menu-close {
+  display: none;
+}
+.menu-button, .menu-close {
+  border: 0;
+  cursor: pointer;
+}
+
+@media screen and (max-width:1031px) 
+{
+  header {
+    width: 80vw;
+  }
+  .left-part, .right-part, .bottom-part {
+    margin: auto;
+    padding: 0 1em;
+  }
+
+   .bottom-left, .right-part {
+    margin-bottom: 2em;
+  }
+
+  .right-part, .bottom-part {
+    width: 63%;
+  }
+}
+@media screen and (max-width:867px) 
+{
+  html {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+  }
+
+  .body {
+    width: 88%;
+    flex-grow: 1;
+  }
+  header {
+    width: 100%;
+  }
+  .menu-button {
+    display: inline-block;
+  }
+
+  .navbar:not(.active) {
+    display: none;
+  }
+  .navbar.active{
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 55vw;
+    height: 100vh;
+    justify-content: flex-start;
+    padding-top: 20vh;
+    z-index: 3;
+    opacity: 1;
+    overflow: hidden;
+  }
+  .navbar.active a {
+      margin-bottom: 2em;
+      font-family: Inter-bold;
+      font-size: 17px;
+      padding-left: 10px;
+  }
+  .menu-close.show {
+      display: block;
+      width: 33px;
+      height: 33px;
+      position: fixed;
+      top: 40px;
+      right: 40px;
+      overflow: hidden;
+      z-index: 5;
+  }
+  .bottom-left {
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 45px;
+    width: 95%;
+  }
+  .dive-into-evolution {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .dive-into-evolution p {
+    font-size: 14px;
+  }
+
+  .left-part, .bottom-part {
+    padding: 0;
+  }
+  .left-part {
+    width: 100%;
+  }
+  .right-part {
+    width: 100%;
+  }
+
+  .bottom-part {
+   flex-direction: column;
+   width: 100%;
+  }
+  .infos-article{
+    width: 100%;
+    max-width: unset;
+    margin-bottom: 1em;
+  }
+
+}
