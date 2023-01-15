@@ -151,7 +151,7 @@ h2 {
 }
 
 .bottom-part {
-  width: 100%;
+  width: 98%;
   display: flex;
   margin-top: 4em;
   justify-content: space-between;
@@ -187,6 +187,7 @@ h2 {
 
 .infos-article b {
   margin-top: 0.2em;
+  font-family: Inter-bold;
 }
 
 .infos-article p {
